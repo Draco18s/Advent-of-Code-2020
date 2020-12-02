@@ -2,6 +2,8 @@
 
 namespace Advent_of_Code_2020 {
 	internal class DayOne {
+		//is this code effcient? no.
+		//does this code work and run fast enough on the target input size? yes.
 		internal static int Part1(string input) {
 			string[] p = input.Split(' ');
 			int[] ints = new int[p.Length];
@@ -10,7 +12,7 @@ namespace Advent_of_Code_2020 {
 			}
 			for(int i = 0; i < p.Length; i++) {
 				for(int j = 0; j < p.Length; j++) {
-					if(ints[i] + ints[j] == 2020) {
+					if(ints[i] + ints[j] == 2020) { //just look at all and compare
 						return ints[i] * ints[j];
 					}
 				}
