@@ -5,9 +5,7 @@ namespace Advent_of_Code_2020 {
 
 		internal static int Part1(string input) {
 			string[] lines = input.Split('\n');
-			int dx = 3;
-			int dy = 1;
-			return FindTrees(dx, dy, lines);
+			return FindTrees(3, 1, lines);
 		}
 
 		private static int FindTrees(int dx, int dy, string[] lines) {
