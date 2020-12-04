@@ -24,6 +24,16 @@ namespace Advent_of_Code_2020 {
 
 		private static bool ValidatePassport1(string lin) {
 			string[] parts = lin.Split(' ');
+			/*
+			byr (Birth Year)
+			iyr (Issue Year)
+			eyr (Expiration Year)
+			hgt (Height)
+			hcl (Hair Color)
+			ecl (Eye Color)
+			pid (Passport ID)
+			cid (Country ID)
+			*/
 			bool byr = false;
 			bool iyr = false;
 			bool eyr = false;
@@ -35,31 +45,32 @@ namespace Advent_of_Code_2020 {
 			if(parts.Length < 7 || parts.Length > 8) return false;
 			foreach(string prt in parts) {
 				string[] fields = prt.Split(':');
-				if(fields[0].Equals("byr")) {
+				if(fields[0] == "byr") {
 					byr = true;
 				}
-				else if(fields[0].Equals("iyr")) {
+				else if(fields[0] == "iyr") {
 					iyr = true;
 				}
-				else if(fields[0].Equals("eyr")) {
+				else if(fields[0] == "eyr") {
 					eyr = true;
 				}
-				else if(fields[0].Equals("hgt")) {
+				else if(fields[0] == "hgt") {
 					hgt = true;
 				}
-				else if(fields[0].Equals("hcl")) {
+				else if(fields[0] == "hcl") {
 					hcl = true;
 				}
-				else if(fields[0].Equals("ecl")) {
+				else if(fields[0] == "ecl") {
 					ecl = true;
 				}
-				else if(fields[0].Equals("pid")) {
+				else if(fields[0] == "pid") {
 					pid = true;
 				}
-				else if(fields[0].Equals("cid")) {
+				else if(fields[0] == "cid") {
 					cid = true;
 				}
 				else {
+					//log any unknown fields
 					Console.WriteLine(fields[0]);
 					return false;
 				}
@@ -70,14 +81,17 @@ namespace Advent_of_Code_2020 {
 		private static bool ValidatePassport2(string lin) {
 			string[] parts = lin.Split(' ');
 			/*
-			byr (Birth Year)
-			iyr (Issue Year)
-			eyr (Expiration Year)
-			hgt (Height)
-			hcl (Hair Color)
-			ecl (Eye Color)
-			pid (Passport ID)
-			cid (Country ID)*/
+			byr (Birth Year) - four digits; at least 1920 and at most 2002.
+			iyr (Issue Year) - four digits; at least 2010 and at most 2020.
+			eyr (Expiration Year) - four digits; at least 2020 and at most 2030.
+			hgt (Height) - a number followed by either cm or in:
+				If cm, the number must be at least 150 and at most 193.
+				If in, the number must be at least 59 and at most 76.
+			hcl (Hair Color) - a # followed by exactly six characters 0-9 or a-f.
+			ecl (Eye Color) - exactly one of: amb blu brn gry grn hzl oth.
+			pid (Passport ID) - a nine-digit number, including leading zeroes.
+			cid (Country ID) - ignored, missing or not.
+			*/
 			bool byr = false;
 			bool iyr = false;
 			bool eyr = false;
@@ -89,47 +103,43 @@ namespace Advent_of_Code_2020 {
 			if(parts.Length < 7 || parts.Length > 8) return false;
 			foreach(string prt in parts) {
 				string[] fields = prt.Split(':');
-				if(fields[0].Equals("byr")) {
+				if(fields[0] == "byr") {
 					byr = true;
-					int yr;
-					if(int.TryParse(fields[1], out yr)) {
+					if(int.TryParse(fields[1], out int yr)) {
 						if(yr < 1920 || yr > 2020) return false;
 					}
 					else {
 						return false;
 					}
 				}
-				else if(fields[0].Equals("iyr")) {
+				else if(fields[0] == "iyr") {
 					iyr = true;
-					int yr;
-					if(int.TryParse(fields[1], out yr)) {
+					if(int.TryParse(fields[1], out int yr)) {
 						if(yr < 2010 || yr > 2020) return false;
 					}
 					else {
 						return false;
 					}
 				}
-				else if(fields[0].Equals("eyr")) {
+				else if(fields[0] == "eyr") {
 					eyr = true;
-					int yr;
-					if(int.TryParse(fields[1], out yr)) {
+					if(int.TryParse(fields[1], out int yr)) {
 						if(yr < 2020 || yr > 2030) return false;
 					}
 					else {
 						return false;
 					}
 				}
-				else if(fields[0].Equals("hgt")) {
+				else if(fields[0] == "hgt") {
 					hgt = true;
 					string vv = fields[1].Substring(0, fields[1].Length - 2);
 					string unit = fields[1].Substring(fields[1].Length - 2, 2);
-					int yr;
-					if(int.TryParse(vv, out yr)) {
-						if(unit.Equals("cm")) {
-							if(yr < 150 || yr > 193) return false;
+					if(int.TryParse(vv, out int hh)) {
+						if(unit == "cm") {
+							if(hh < 150 || hh > 193) return false;
 						}
-						else if(unit.Equals("in")) {
-							if(yr < 59 || yr > 76) return false;
+						else if(unit == "in") {
+							if(hh < 59 || hh > 76) return false;
 						}
 						else {
 							return false;
@@ -139,9 +149,9 @@ namespace Advent_of_Code_2020 {
 						return false;
 					}
 				}
-				else if(fields[0].Equals("hcl")) {
+				else if(fields[0] == "hcl") {
 					hcl = true;
-					if(fields[1][0] != '#' || fields[1].Length > 7) return false;
+					if(fields[1][0] != '#' || fields[1].Length != 7) return false;
 					foreach(char c in fields[1]) {
 						if(c == '#') continue;
 						if(c != 'a' && c != 'b' && c != 'c' && c != 'd' && c != 'e' && c != 'f') {
@@ -151,28 +161,25 @@ namespace Advent_of_Code_2020 {
 						}
 					}
 				}
-				else if(fields[0].Equals("ecl")) {
+				else if(fields[0] == "ecl") {
 					ecl = true;
 					string col = fields[1];
-					if(col.Equals("amb") || col.Equals("blu") || col.Equals("brn") || col.Equals("gry")
-						|| col.Equals("grn") || col.Equals("hzl") || col.Equals("oth")) {
-
-					}
-					else {
+					if(!(col == "amb" || col == "blu" || col == "brn" || col == "gry"
+						|| col == "grn" || col == "hzl" || col == "oth")) {
 						return false;
 					}
 				}
-				else if(fields[0].Equals("pid")) {
+				else if(fields[0] == "pid") {
 					pid = true;
-					int yr;
-					if(!int.TryParse(fields[1], out yr) || fields[1].Length != 9) {
+					if(!int.TryParse(fields[1], out int yr) || fields[1].Length != 9) {
 						return false;
 					}
 				}
-				else if(fields[0].Equals("cid")) {
+				else if(fields[0] == "cid") {
 					cid = true;
 				}
 				else {
+					//log any unknown fields
 					Console.WriteLine(fields[0]);
 					return false;
 				}
