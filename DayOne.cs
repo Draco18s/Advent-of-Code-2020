@@ -5,7 +5,7 @@ namespace Advent_of_Code_2020 {
 		//is this code effcient? no.
 		//does this code work and run fast enough on the target input size? yes.
 		internal static int Part1(string input) {
-			string[] p = input.Split(' ');
+			string[] p = input.Split('\n');
 			int[] ints = new int[p.Length];
 			for(int i = 0; i < p.Length; i++) {
 				ints[i] = int.Parse(p[i]);
@@ -21,7 +21,7 @@ namespace Advent_of_Code_2020 {
 		}
 
 		internal static int Part2(string input) {
-			string[] p = input.Split(' ');
+			string[] p = input.Split('\n');
 			int[] ints = new int[p.Length];
 			for(int i = 0; i < p.Length; i++) {
 				ints[i] = int.Parse(p[i]);
