@@ -3,7 +3,7 @@
 namespace Advent_of_Code_2020 {
 	internal class DayFive {
 		internal static int Part1(string input) {
-			string[] lines = input.Split(',');
+			string[] lines = input.Split('\n');
 			int maxRow = 0;
 			foreach(string line in lines) {
 				int row = getRow(line);
@@ -59,7 +59,7 @@ namespace Advent_of_Code_2020 {
 		}
 
 		internal static int Part2(string input) {
-			string[] lines = input.Split(',');
+			string[] lines = input.Split('\n');
 			bool[] takenSeats = new bool[1024];
 			for(int i=0;i<1024;i++) {
 				takenSeats[i] = false;

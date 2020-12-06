@@ -4,6 +4,8 @@ using System.Linq;
 namespace Advent_of_Code_2020 {
 	internal class DaySix {
 		internal static int Part1(string input) {
+			input = input.Replace('\n', ',');
+			input = input.Replace(",,", "|");
 			string[] lines = input.Split('|');
 			int total = 0;
 			foreach(string line in lines) {
@@ -18,6 +20,8 @@ namespace Advent_of_Code_2020 {
 		}
 
 		internal static int Part2(string input) {
+			input = input.Replace('\n', ',');
+			input = input.Replace(",,", "|");
 			string[] lines = input.Split('|');
 			int total = 0;
 			foreach(string line in lines) {
