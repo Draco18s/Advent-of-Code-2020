@@ -10,19 +10,20 @@ namespace Advent_of_Code_2020 {
 			List<string> validContainers = new List<string>();
 			List<string> searchContainers = new List<string>();
 			searchContainers.Add("shiny gold");
-			while(searchContainers.Count > 0)
-			{
+			while(searchContainers.Count > 0) {
 				string startBag = searchContainers[0];
 				searchContainers.RemoveAt(0);
 				foreach(BagHolder bag in bags) {
 					if(bag.canContain.ContainsKey(startBag)) {
+						// any time we find a new bag we can place a current bag in
+						// that's a new outer-most bag
+						// add it to the final list and then search for all containers of that bag
 						if(!validContainers.Contains(bag.name)) {
 							validContainers.Add(bag.name);
 							searchContainers.Add(bag.name);
 						}
 					}
 				}
-				
 			} 
 			return validContainers.Count;
 		}
@@ -44,7 +45,6 @@ namespace Advent_of_Code_2020 {
 		internal static int Part2(string input) {
 			string[] lines = input.Split('\n');
 			List<BagHolder> bags = BagParser(lines);
-
 			List<string> searchContainers = new List<string>();
 			searchContainers.Add("shiny gold");
 			int bagCount = 0;
@@ -52,6 +52,8 @@ namespace Advent_of_Code_2020 {
 				string currentSearch = searchContainers[0];
 				searchContainers.RemoveAt(0);
 				BagHolder bag = bags.Find(x => x.name == currentSearch);
+				// for every bag in the search, count its conents
+				// and add them to the search
 				foreach(string b in bag.canContain.Keys) {
 					int count = bag.canContain[b];
 					for(int i = 0; i < count; i++)
