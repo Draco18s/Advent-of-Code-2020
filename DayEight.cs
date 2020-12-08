@@ -6,13 +6,13 @@ namespace Advent_of_Code_2020 {
 			string[] lines = input.Split('\n');
 			ExecutionContext e = new ExecutionContext(lines); // make an execution context to handle the VM
 			int ac;
-			List<int> visted = new List<int>();
+			List<int> visited = new List<int>();
 			do {
 				int p = e.Run(out ac); // while true: tick VM
-				if(visted.Contains(p)) { // track pointer location
+				if(visited.Contains(p)) { // track pointer location
 					return ac; // if we infinite loop, print accumulator
 				}
-				visted.Add(p);
+				visited.Add(p);
 			} while(true);
 		}
 
