@@ -41,8 +41,8 @@ namespace Advent_of_Code_2020 {
 			string[] lines = input.Split('\n');
 			// no, this isn't the smartest way to do it
 			// dropping the whole sum rather than accordianing
-			// is going to be slower.
-			// from the front but on ~500 values, who cares?
+			// from the front is going to be slower.
+			// but on ~500 values, who cares?
 			for(int x=0; x < lines.Length; x++) {
 				int total = 0;
 				int v;
