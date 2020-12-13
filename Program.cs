@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 namespace Advent_of_Code_2020 {
 	class Program {
 		static void Main(string[] args) {
-			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day12.txt"));
+			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day13.txt"));
 			input = input.Replace("\r", "");
 			//input = @"";
-			long result = DayTwelve.Part1(input);
+			long result = DayThirteen.Part1(input);
 			Console.WriteLine(result);
 			DateTime s = DateTime.Now;
-			result = DayTwelve.Part2(input);
+			result = DayThirteen.Part2(input);
 			DateTime e = DateTime.Now;
 			Console.WriteLine(result);
 			Console.WriteLine((e-s).TotalMilliseconds);
