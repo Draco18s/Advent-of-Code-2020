@@ -40,7 +40,8 @@ namespace Advent_of_Code_2020 {
 					busIDs[i] = v;
 				}
 			}
-			int numPlus = 0;
+			// This is what was used to get the star
+			/*int numPlus = 0;
 			Console.WriteLine("Plug this into wolframalpha:");
 			foreach(int x in busIDs) {
 				if(x == 0) {
@@ -51,7 +52,32 @@ namespace Advent_of_Code_2020 {
 				numPlus++;
 			}
 			Console.Write("\n");
-			return -1;
+			return -1;*/
+			// This is actually smort
+			long offset = busIDs[0];
+			long startTime = 0;
+			long currentTime = 0;
+			int busIndex = 0;
+			for(int i = 0; busIndex == 0; i++) {
+				if(busIDs[i] != 0) busIndex = i;
+			}
+			while(true) {
+				startTime += offset;
+				currentTime = startTime + busIndex;
+				if(currentTime % busIDs[busIndex] == 0) {
+					offset *= busIDs[busIndex];
+					if(busIndex+1 >= busIDs.Length) {
+						return startTime;
+					}
+					int j = busIndex+1;
+					busIndex = 0;
+					for(int i = j; busIndex == 0; i++) {
+						if(busIDs[i] != 0) {
+							busIndex = i;
+						}
+					}
+				}
+			}
 		}
 	}
 }
