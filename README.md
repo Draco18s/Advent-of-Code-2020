@@ -5,6 +5,7 @@ https://adventofcode.com/2020/
 ```
       --------Part 1--------   --------Part 2--------
 Day       Time   Rank  Score       Time   Rank  Score
+ 13   00:14:23   3085      0   00:57:00   1347      0
  12   00:09:37    738      0   00:29:00   1477      0
  11   00:21:03   1220      0   00:36:00   1242      0
  10   00:05:21    366      0   01:31:55   4785      0
@@ -22,3 +23,5 @@ Day       Time   Rank  Score       Time   Rank  Score
 *Started late on day 1*
 
 *Day 10 took an embarrassingly long time to optimize*
+
+*Day 13 outputs a wolframalpha query. I feel dirty. :(*
