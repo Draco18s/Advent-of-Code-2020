@@ -4,11 +4,10 @@
 			string[] lines = input.Split('\n');
 			FerryExecutionContext context = new FerryExecutionContext(lines);
 			bool r;
-			/*do {
-				r = context.Tick();
-			} while(r);*/
-			//return context.GetMemorySum();
-			return -1;
+			do {
+				r = context.TickPart1();
+			} while(r);
+			return context.GetMemorySum();
 		}
 
 		internal static long Part2(string input) {
