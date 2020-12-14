@@ -48,6 +48,7 @@
     <Compile Include="DayEleven.cs" />
     <Compile Include="DayFive.cs" />
     <Compile Include="DayFour.cs" />
+    <Compile Include="DayFourteen.cs" />
     <Compile Include="DayNine.cs" />
     <Compile Include="DayOne.cs" />
     <Compile Include="DaySeven.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="DayTwelve.cs" />
     <Compile Include="DayTwo.cs" />
     <Compile Include="ExecutionContext.cs" />
+    <Compile Include="FerryExecutionContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
