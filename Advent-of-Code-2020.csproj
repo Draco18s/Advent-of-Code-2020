@@ -46,6 +46,7 @@
     <Compile Include="BagHolder.cs" />
     <Compile Include="DayEight.cs" />
     <Compile Include="DayEleven.cs" />
+    <Compile Include="DayFifteen.cs" />
     <Compile Include="DayFive.cs" />
     <Compile Include="DayFour.cs" />
     <Compile Include="DayFourteen.cs" />
