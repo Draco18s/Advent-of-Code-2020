@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 namespace Advent_of_Code_2020 {
 	class Program {
 		static void Main(string[] args) {
-			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day14.txt"));
+			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day15.txt"));
 			input = input.Replace("\r", "");
 			//input = @"";
-			long result = DayFourteen.Part1(input);
-			Console.WriteLine(result);
 			DateTime s = DateTime.Now;
-			result = DayFourteen.Part2(input);
+			long result = DayFifteen.Part1(input);
 			DateTime e = DateTime.Now;
 			Console.WriteLine(result);
-			Console.WriteLine((e-s).TotalMilliseconds);
+			Console.WriteLine("Time: " + (e - s).TotalMilliseconds);
+			s = DateTime.Now;
+			result = DayFifteen.Part2(input);
+			e = DateTime.Now;
+			Console.WriteLine(result);
+			Console.WriteLine("Time: " + (e-s).TotalMilliseconds);
 			Console.ReadKey();
 		}
 	}
