@@ -78,7 +78,7 @@ namespace Advent_of_Code_2020 {
 			}
 
 			int nearbyStart = GetLineIndex(lines, "nearby tickets:");
-			
+			// All lines after "nearby tickets:" are other tickets
 			List<string> validTickets = new List<string>();
 			for(int i = nearbyStart + 1; i < lines.Length; i++) {
 				foreach(string val in lines[i].Split(',')) {
