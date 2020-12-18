@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BagHolder.cs" />
     <Compile Include="DayEight.cs" />
+    <Compile Include="DayEightteen.cs" />
     <Compile Include="DayEleven.cs" />
     <Compile Include="DayFifteen.cs" />
     <Compile Include="DayFive.cs" />
@@ -63,11 +64,62 @@
     <Compile Include="DayTwo.cs" />
     <Compile Include="ExecutionContext.cs" />
     <Compile Include="FerryExecutionContext.cs" />
+    <Compile Include="Koopakiller.Numerics\AngleUnits.cs" />
+    <Compile Include="Koopakiller.Numerics\ArgumentDifferentException.cs" />
+    <Compile Include="Koopakiller.Numerics\ArgumentDoubleException.cs" />
+    <Compile Include="Koopakiller.Numerics\BigInteger.cs" />
+    <Compile Include="Koopakiller.Numerics\BigRational.cs" />
+    <Compile Include="Koopakiller.Numerics\Calculator.cs" />
+    <Compile Include="Koopakiller.Numerics\ComparerMethod.cs" />
+    <Compile Include="Koopakiller.Numerics\Complex.cs" />
+    <Compile Include="Koopakiller.Numerics\Constants.cs" />
+    <Compile Include="Koopakiller.Numerics\CStepEventArgs.cs" />
+    <Compile Include="Koopakiller.Numerics\CTrigonometry.cs" />
+    <Compile Include="Koopakiller.Numerics\DomainFunctionLimits.cs" />
+    <Compile Include="Koopakiller.Numerics\DomainSet.cs" />
+    <Compile Include="Koopakiller.Numerics\DomainSets.cs" />
+    <Compile Include="Koopakiller.Numerics\FunctionException.cs" />
+    <Compile Include="Koopakiller.Numerics\GetHashCodeMethod.cs" />
+    <Compile Include="Koopakiller.Numerics\HarmonicSeries.cs" />
+    <Compile Include="Koopakiller.Numerics\IBigNumber.cs" />
+    <Compile Include="Koopakiller.Numerics\IConstant.cs" />
+    <Compile Include="Koopakiller.Numerics\IDrawable.cs" />
+    <Compile Include="Koopakiller.Numerics\IInteger.cs" />
+    <Compile Include="Koopakiller.Numerics\IMathComparison.cs" />
+    <Compile Include="Koopakiller.Numerics\IMathEqualComparison.cs" />
+    <Compile Include="Koopakiller.Numerics\Interval.cs" />
+    <Compile Include="Koopakiller.Numerics\IntervalTypes.cs" />
+    <Compile Include="Koopakiller.Numerics\INumber.cs" />
+    <Compile Include="Koopakiller.Numerics\IPoint.cs" />
+    <Compile Include="Koopakiller.Numerics\ISet.cs" />
+    <Compile Include="Koopakiller.Numerics\JosephusProblem.cs" />
+    <Compile Include="Koopakiller.Numerics\LambdaEqualityComparer.cs" />
+    <Compile Include="Koopakiller.Numerics\ListSet.cs" />
+    <Compile Include="Koopakiller.Numerics\Matrix.cs" />
+    <Compile Include="Koopakiller.Numerics\MersennePrime.cs" />
+    <Compile Include="Koopakiller.Numerics\NumberSystem.cs" />
+    <Compile Include="Koopakiller.Numerics\Point2D.cs" />
+    <Compile Include="Koopakiller.Numerics\Point3D.cs" />
+    <Compile Include="Koopakiller.Numerics\PointInRangeMatchOptions.cs" />
+    <Compile Include="Koopakiller.Numerics\Polygon2D.cs" />
+    <Compile Include="Koopakiller.Numerics\Prime.cs" />
+    <Compile Include="Koopakiller.Numerics\Properties\AssemblyInfo.cs" />
+    <Compile Include="Koopakiller.Numerics\Resources\ResourceManager.cs" />
+    <Compile Include="Koopakiller.Numerics\SpecialValues.cs" />
+    <Compile Include="Koopakiller.Numerics\Triangle.cs" />
+    <Compile Include="Koopakiller.Numerics\VariableNullException.cs" />
+    <Compile Include="Koopakiller.Numerics\Vector.cs" />
+    <Compile Include="Koopakiller.Numerics\_Extensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Koopakiller.Numerics\Koopakiller.Numerics.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Koopakiller.Numerics\Koopakiller.Numerics.csproj" />
+    <Content Include="Koopakiller.Numerics\Resources\Messages.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
