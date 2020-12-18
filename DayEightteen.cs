@@ -1,5 +1,4 @@
-﻿using Koopakiller.Numerics;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Advent_of_Code_2020 {
