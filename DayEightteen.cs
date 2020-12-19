@@ -64,10 +64,6 @@ namespace Advent_of_Code_2020 {
 					return -1;
 				}
 				Tuple<char, long> f = stack.Pop();
-				if(total + f.Item2 < 0) {
-					Console.Write(total + "+");
-					total = 0;
-				}
 				total += f.Item2;
 			}
 			return total;
