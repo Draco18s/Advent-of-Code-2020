@@ -5,6 +5,7 @@ https://adventofcode.com/2020/
 ```
       --------Part 1--------   --------Part 2--------
 Day       Time   Rank  Score       Time   Rank  Score
+ 21   13:04:03   9722      0   13:56:05   9693      0
  20   11:04:40   8174      0   16:32:57   5085      0
  19   00:23:08    332      0   01:10:04    844      0
  18   00:52:01   2805      0   01:34:41   3096      0
@@ -36,3 +37,5 @@ Day       Time   Rank  Score       Time   Rank  Score
 *Day 18 I kept messing up the Shunting Yard algorithm.*
 
 *Day 20 I was asleep for 7.5 hours. Had to rewrite edge-matching twice to finish part 2.*
+
+*Day 21 I struggled. 7.5 hours of sleep.*
