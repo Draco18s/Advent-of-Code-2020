@@ -92,6 +92,7 @@
     <Compile Include="DayTwelve.cs" />
     <Compile Include="DayTwenty.cs" />
     <Compile Include="DayTwentyOne.cs" />
+    <Compile Include="DayTwentyTwo.cs" />
     <Compile Include="DayTwo.cs" />
     <Compile Include="ExecutionContext.cs" />
     <Compile Include="FerryExecutionContext.cs" />
