@@ -12,16 +12,16 @@ using Advent_of_Code_2020.StatsBuilder;
 namespace Advent_of_Code_2020 {
 	class Program {
 		static void Main(string[] args) {
-			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day22.txt"));
+			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day23.txt"));
 			input = input.Replace("\r", "");
-			//input = @"";
+			//string input = @"";
 			DateTime s = DateTime.Now;
-			long result = DayTwentyTwo.Part1(input);
+			long result = DayTwentyThree.Part1(input);
 			DateTime e = DateTime.Now;
 			Console.WriteLine(result);
 			Console.WriteLine("Time: " + (e - s).TotalMilliseconds);
 			s = DateTime.Now;
-			result = DayTwentyTwo.Part2(input);
+			result = DayTwentyThree.Part2(input);
 			e = DateTime.Now;
 			Console.WriteLine(result);
 			Console.WriteLine("Time: " + (e-s).TotalMilliseconds);
