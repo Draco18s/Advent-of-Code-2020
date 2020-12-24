@@ -21,37 +21,22 @@ namespace Advent_of_Code_2020 {
 					else {
 						next = line[c].ToString();
 					}
-					switch(next) {
-						case "e":
-							dir = HexDir.E;
-							break;
-						case "se":
-							dir = HexDir.SE;
-							break;
-						case "ne":
-							dir = HexDir.NE;
-							break;
-						case "w":
-							dir = HexDir.W;
-							break;
-						case "sw":
-							dir = HexDir.SW;
-							break;
-						case "nw":
-							dir = HexDir.NW;
-							break;
-					}
+					dir = (HexDir)Enum.Parse(typeof(HexDir), next.ToUpper());
 					GetHexPos(ref x, ref y, dir);
 				}
 				hexGrid[x, y] = !hexGrid[x, y];
 			}
 			int count = 0;
-			for(int px = 0; px<100; px++) {
-				for(int py = 0; py < 100; py++) {
-					if(hexGrid[px,py]) {
+			bool offset = false;
+			for(int py = 0; py < 100; py++) {
+				for(int px = 0; px < 100; px++) {
+					if(hexGrid[px, py]) {
 						count++;
 					}
+					//Console.Write((hexGrid[px, py] ? "##" : "  "));
 				}
+				offset = !offset;
+				//Console.Write("\n" + (offset?" ":""));
 			}
 			return count;
 		}
@@ -100,26 +85,7 @@ namespace Advent_of_Code_2020 {
 					else {
 						next = line[c].ToString();
 					}
-					switch(next) {
-						case "e":
-							dir = HexDir.E;
-							break;
-						case "se":
-							dir = HexDir.SE;
-							break;
-						case "ne":
-							dir = HexDir.NE;
-							break;
-						case "w":
-							dir = HexDir.W;
-							break;
-						case "sw":
-							dir = HexDir.SW;
-							break;
-						case "nw":
-							dir = HexDir.NW;
-							break;
-					}
+					dir = (HexDir)Enum.Parse(typeof(HexDir), next.ToUpper());
 					GetHexPos(ref x, ref y, dir);
 				}
 				hexGrid[x, y] = !hexGrid[x, y];
@@ -127,12 +93,16 @@ namespace Advent_of_Code_2020 {
 			for(int i =0; i< 100; i++)
 				MutateGrid(ref hexGrid);
 			int count = 0;
-			for(int px = 0; px < 200; px++) {
-				for(int py = 0; py < 200; py++) {
+			bool offset = false;
+			for(int py = 0; py < 200; py++) {
+				for(int px = 0; px < 200; px++) {
 					if(hexGrid[px, py]) {
 						count++;
 					}
+					//Console.Write((hexGrid[px, py] ? "##" : "  "));
 				}
+				offset = !offset;
+				//Console.Write("\n" + (offset ? " " : ""));
 			}
 			return count;
 		}
