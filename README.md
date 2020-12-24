@@ -5,6 +5,7 @@ https://adventofcode.com/2020/
 ```
       --------Part 1--------   --------Part 2--------
 Day       Time   Rank  Score       Time   Rank  Score
+ 24   00:20:41   1108      0   00:32:39    719      0
  23   00:23:09    643      0   13:07:51   6864      0
  22   00:07:21    538      0   00:39:51    853      0
  21   13:04:03   9722      0   13:56:05   9693      0
@@ -43,3 +44,5 @@ Day       Time   Rank  Score       Time   Rank  Score
 *Day 21 I struggled. 7.5 hours of sleep.*
 
 *Day 23 went to bed after part 1. Part 2 had multiple interruptions leading to stupid mistakes.*
+
+*Day 24 computer crashed as I was reading part 2, lost a few minutes.*
