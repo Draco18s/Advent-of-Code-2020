@@ -12,16 +12,16 @@ using Advent_of_Code_2020.StatsBuilder;
 namespace Advent_of_Code_2020 {
 	class Program {
 		static void Main(string[] args) {
-			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day24.txt"));
+			string input = File.ReadAllText(Path.GetFullPath("../../inputs/Day25.txt"));
 			input = input.Replace("\r", "");
 			//string input = @"";
 			DateTime s = DateTime.Now;
-			long result = DayTwentyFour.Part1(input);
+			long result = DayTwentyFive.Part1(input);
 			DateTime e = DateTime.Now;
 			Console.WriteLine(result);
 			Console.WriteLine("Time: " + (e - s).TotalMilliseconds);
 			s = DateTime.Now;
-			result = DayTwentyFour.Part2(input);
+			result = DayTwentyFive.Part2(input);
 			e = DateTime.Now;
 			Console.WriteLine(result);
 			Console.WriteLine("Time: " + (e - s).TotalMilliseconds);
@@ -64,7 +64,8 @@ namespace Advent_of_Code_2020 {
 				SortUsers(ref users, day, part);
 				foreach(AoCUser user in users) {
 					int pts = GetPointsForUser(ref users, user.id, day, part);
-					user.locPoints += pts;
+					if(d > 1)
+						user.locPoints += pts;
 					parts[p - 1] += GetUserLineScore(user, day, part, pts);
 				}
 			}

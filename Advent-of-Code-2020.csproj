@@ -91,6 +91,7 @@
     <Compile Include="DayThree.cs" />
     <Compile Include="DayTwelve.cs" />
     <Compile Include="DayTwenty.cs" />
+    <Compile Include="DayTwentyFive.cs" />
     <Compile Include="DayTwentyFour.cs" />
     <Compile Include="DayTwentyOne.cs" />
     <Compile Include="DayTwentyThree.cs" />
