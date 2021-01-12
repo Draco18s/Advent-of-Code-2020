@@ -29,14 +29,17 @@ namespace Advent_of_Code_2020 {
 			int count = 0;
 			bool offset = false;
 			for(int py = 0; py < 100; py++) {
+				for(int yy = 0; yy < py; yy++) {
+					Console.Write(" ");
+				}
 				for(int px = 0; px < 100; px++) {
 					if(hexGrid[px, py]) {
 						count++;
 					}
-					//Console.Write((hexGrid[px, py] ? "##" : "  "));
+					Console.Write((hexGrid[px, py] ? "##" : ".."));
 				}
 				offset = !offset;
-				//Console.Write("\n" + (offset?" ":""));
+				Console.Write("\n");
 			}
 			return count;
 		}
